@@ -36,6 +36,7 @@ export default function Signup() {
         <div className="page">
             <div className="title">Cadastro</div>
             <div className="signup-box">
+            <div className="input-box">
             <form onSubmit={SendForm}>
                 <div className="signup-title" >Nome</div>
                 <input required placeholder="Insira seu nome" type={"name"} name="name" value={form.name || ""} onChange={handleForm} />
@@ -52,8 +53,9 @@ export default function Signup() {
                 <button>CADASTRAR</button>
       </form>
             <Link to="/">
-            <div>Já é cadastrado? Entre!</div>
+            <div className="signin-title">Já é cadastrado? Entre!</div>
             </Link>
+            </div>
             </div>
         </div>
       
@@ -74,21 +76,35 @@ const Content=styled.div`
     margin-top: 5vh;
     margin-bottom: 5vh;
 }
-.signup-box{
+.signup-box{    
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
     width:70%;
-    height: 60%;
+    height: 70%;
     border:2px solid black;
 }
+.input-box{
+  width: 90%;
+  margin-top:2%
+}
 input{
-    margin-left: 5%;
+  height: 30px;
+  width: 100%;
+  box-sizing: border-box;
+   
 }
 .signup-title{
-    margin-left:5%;
+  margin: 5px 0px 5px 0px;
 }
 button{
-    margin-top: 1%;
+  height: 40px;
+  width: 60%;
+    margin: 5% 20% 10px 20%;
+}
+.signin-title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 `

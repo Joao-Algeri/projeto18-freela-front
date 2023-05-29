@@ -40,13 +40,15 @@ left:0px;
 height: 10vh;
 width: 100vw;
 border: 2px solid black;
+background-color: blue;
 
 .name{
+    font-size: 30px;
     margin-left: 1%;
 }
 input{
     margin-left: 20%;
-    height: 20%;
-    width: 30%;
+    height: 30%;
+    width: 35%;
 }
 `

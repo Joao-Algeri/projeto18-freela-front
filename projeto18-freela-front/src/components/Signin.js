@@ -26,34 +26,28 @@ export default function Signin() {
         
     }
     function HandleSucess(request) {
-        // if () {   
-        //   const userData={}
-
-        //   setUser(userData);  
-
-        //   navigate("/subscriptions/")      
-        // }
-        // else {
-        //   const userData={}
+              
         //   setUser(userData);  
         //   navigate("/home")
-        // }
+        
     }
     return (
         <Content>
             <div className="page">
                 <div className="title">Login</div>
+                <div className="signIn-box">
                 <div className="input-box">
                 <form onSubmit={SendForm}>
-                    <div>E-mail</div>
+                    <div className="input-title">E-mail</div>
                     <input required placeholder="Insira seu email" type={"email"} name="email" value={form.email || ""} onChange={handleForm} />
-                    <div>Senha</div>
+                    <div className="input-title" >Senha</div>
                     <input required placeholder="Insira sua senha" type={"password"} name="password" value={form.password || ""} onChange={handleForm} />
                     <button>ENTRAR</button>
                 </form>
                 <Link to="/signup">
-                <div>Não possui conta? Cadastre-se!</div>                
+                <div className="signup-title">Não possui conta? Cadastre-se!</div>                
                 </Link>
+                </div>
                 </div>
             </div>
         </Content>
@@ -76,12 +70,38 @@ const Content=styled.div`
     font-size: 30px;
 
 }
-.input-box{
+.signIn-box{
+    display: flex;
+    flex-direction: column;
     height: 60%;
     width: 70%;
-    border: 2px solid black;    
+    border: 2px solid black;
+    display:flex;
+    align-items: center;
 }
-.input{
-    
+.input-box{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10%;
+}
+.input-title{
+    margin: 3% 0px 5px 0px;
+}
+input{
+    box-sizing: border-box;
+    width: 100%;
+    height: 30px;
+}
+button{
+    width:70%;
+    height: 50px;
+    margin:12% 15% 0% 15%;
+}
+.signup-title{
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 `

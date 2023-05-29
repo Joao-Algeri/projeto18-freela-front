@@ -20,21 +20,24 @@ export default function User() {
             </div>
         </div>
         <div className="posts">
-            <div className="post">
-                <img className="post-img" src="https://s3-alpha.figma.com/hub/file/948140848/1f4d8ea7-e9d9-48b7-b70c-819482fb10fb-cover.png" alt="placeholder"/>
-                <div className="post-details">
-                <img className="heart-icon" src="https://cdn-icons-png.flaticon.com/512/105/105220.png" alt="heart"/>
-                <div>curtir</div>
-                <div>22/02/22 às 22:22</div>
+                    <div className="post">
+                        <img className="post-img" src="https://s3-alpha.figma.com/hub/file/948140848/1f4d8ea7-e9d9-48b7-b70c-819482fb10fb-cover.png" alt="placeholder" />
+                        <div className="post-details">
+                        <div className="post-details-left">
+                            <img className="heart-icon" src="https://cdn-icons-png.flaticon.com/512/105/105220.png" alt="heart" />
+                            <div>Curtir </div>
+                            </div>
+                            <div>22/02/22 às 22:22</div>
+                        </div>
+                        <div className="post-description">Descricao do post Descricao do post Descricao do post Descricao do post Descricao do post Descricao do post Descricao do post</div>
+                    </div>
                 </div>
-                <div>Descricao do post</div>
+                <img onClick={() => Navigate("/newpost")} className="create-post-icon" src="https://cdn-icons-png.flaticon.com/512/32/32360.png" alt="create post" />
             </div>
-        </div>        
-      </div>
-   </Content>
-  )
+        </Content>
+    )
 }
-const Content=styled.div`
+const Content = styled.div`
 .page{
     margin-top: 10vh;
     display: flex;
@@ -69,10 +72,13 @@ const Content=styled.div`
     display: flex;    
 }
 .user-button{
+ display: flex;
+ align-items: center;
+ justify-content: center;
  margin-top: 4%;
- border: 2px solid black;
- width: 40%;
- margin-right: 15%;
+ border: 1px solid black;
+ width: 50%;
+ margin-right: 10%;
 }
 .posts{
     width: 70%;    
@@ -92,16 +98,29 @@ const Content=styled.div`
     width: 95%;
 }
 .post-details{
+    width: 95%;
     display: flex;
-    justify-content: space-around;
+    height: 8%;
+    align-items: center;
+    justify-content: space-between;
+}
+.post-details-left{
+    display: flex;
+    align-items: center;
 }
 .heart-icon{
-    height: 10px;
+    height: 20px;
+    margin-right: 5px;
 }
 .create-post-icon{
     width: 40px;
     position: fixed;
     bottom:30px;
     right:30px;
+}
+.post-description{
+    margin-top:2%;
+    width: 90%;
+    height: 14%;
 }
 `
